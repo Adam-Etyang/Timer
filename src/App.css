@@ -3,4 +3,36 @@
   justify-content : center;
   align-items: center;
   min-height : 100vh;
+  background-color:#1E1E1E;
 }
+
+.time-container{
+  display : flex;
+}
+
+.hour-container{
+  align-items:center;
+font-family: 'SF Mono', monospace;
+margin:2em;
+}
+.seconds{font-size:6rem;
+padding-bottom:0;}
+.tag
+{}
+
+.minuite-container{
+  font-family: 'SF Mono', monospace;
+  font-size : 6rem;
+  margin:2em;
+
+}
+.seconds-container{
+font-family: 'SF Mono', monospace;
+font-size : 6rem;
+padding-left:2em;
+
+
+}
+
+
+
