@@ -1,5 +1,6 @@
 .container{
   display : flex;
+  flex-direction: column;
   justify-content : center;
   align-items: center;
   min-height : 100vh;
@@ -7,32 +8,70 @@
 }
 
 .time-container{
-  display : flex;
+   display: flex;
+   align-items: center;
+   gap: 3em;
 }
 
 .hour-container{
-  align-items:center;
-font-family: 'SF Mono', monospace;
-margin:2em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'SF Mono', monospace;
 }
-.seconds{font-size:6rem;
-padding-bottom:0;}
-.tag
-{}
+.label {
+   font-size: 1rem;
+   margin: 0;
+   color: #888;
+}
+
+.value {
+   font-size: 6rem;
+   margin: 0;
+   color: #fff;
+}
 
 .minuite-container{
-  font-family: 'SF Mono', monospace;
-  font-size : 6rem;
-  margin:2em;
-
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'SF Mono', monospace;
+   font-size: 6rem;
 }
 .seconds-container{
-font-family: 'SF Mono', monospace;
-font-size : 6rem;
-padding-left:2em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'SF Mono', monospace;
+   font-size: 6rem;
+}
 
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  gap:2em;
+  
 
 }
+.cancel-button{
+  width:9em;
+  height:2.5em;
+  border-radius:3em;
+  border:0;
+  font-family:'SF Mono', monospace;
+  background-color : #262626;
+}
+.start-button{
+  width:9em;
+  height:2.5em;
+  border:0;
+  border-radius: 3em;
+  font-family:'SF Mono', monospace;
+  background-color : #31D158;
+
+}
+
 
 
 

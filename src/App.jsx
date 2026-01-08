@@ -7,26 +7,37 @@ export default function App() {
   const [hours, setHours] = useState(0);
 
   return (
-    <div className='container'>
-      {/*setting time page*/}
-      <div className='time-container'>
-        <div className='hour-container'>
-          <span className='hr-tag'><p>hr</p></span>
-          <span className='seconds'><p>{seconds}</p></span>
+    <>
+      <div className='container'>
+        {/*setting time page*/}
+        <div className='time-container'>
+          <div className='hour-container'>
+            <p className='label'>hr</p>
+            <p className='value'>{hours}</p>
+          </div>
+          <div className='minuite-container'>
+            <p className='label'>min</p>
+            <p className='value'>{minuites}</p>
+          </div>
+          <div className='seconds-container'>
+            <p className='label'>sec</p>
+            <p className='value'>{seconds}</p>
+          </div>
         </div>
-        <div className='minuite-container'>
-          <span className='time'><p>{minuites}</p></span>
-        </div>
-        <div className='seconds-container'>
-          <span><p className='time'>{hours}</p></span>
-        </div>
-      </div>
-      <div className='buttons-container'>
-        <div className='cancel-button'></div>
-        <div className='start-button'></div>
-      </div>
+        <div className='buttons-container'>
+          <div>
+            <button className='cancel-button'>Cancel</button>
+          </div>
+          <div>
+            <button className='start-button'>Start</button>
 
-    </div>
+          </div>
+        </div>
+
+
+      </div>
+    </>
+
   );
 
 
