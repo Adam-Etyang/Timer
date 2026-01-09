@@ -70,6 +70,16 @@
   font-family:'SF Mono', monospace;
   background-color : #31D158;
 }
+.pause-button{
+    width:9em;
+  height:2.5em;
+  border:0;
+  border-radius: 3em;
+  font-family:'SF Mono', monospace;
+  background-color : #FF9230;
+
+
+}
 .increase-button{
   padding:0px;
   margin-top:12px;
@@ -82,11 +92,56 @@
 .Decrease-button{
   height:3em;
   width:3em;
-  margin-bottom:12px;
+margin-bottom:12px;
   border-radius:50%;
   font-size:12px;
   border:0
 }
+.Timer-container{
+display : flex;
+flex-direction: column;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+  background-color:#1E1E1E;
+}
+.Enclosure{
+
+}
+.Timer{
+  display:flex;
+  gap:3em;
+}
+
+.ring-wrapper{
+position:relative;
+width:30em;
+height:30em;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+.ring-progress{
+fill:none;
+stroke: #ff9230;
+stroke-width: 10;
+stroke-linecap: round;
+transition: stroke-dashoffset 0.5s linear;
+
+}
+.ring{
+  position:absolute;
+  transform:rotate(-90deg);
+
+}
+.ring-bg{
+fill:none;
+stroke:#2a2a2a;
+stroke-width:10;
+}
+
+
 
 
 
