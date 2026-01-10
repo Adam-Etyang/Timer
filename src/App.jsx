@@ -49,6 +49,24 @@ export default function App() {
     }
   }
 
+  const playCompletionSound = () => {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.frequency.value = 800;
+    oscillator.type = 'sine';
+
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.5);
+  }
+
   //counter-logic
   useEffect(() => {
     if (!running || paused || remaining <= 0) return;
@@ -60,10 +78,11 @@ export default function App() {
     [paused, running, remaining]);
 
   useEffect(() => {
-    if (remaining === 0) {
+    if (remaining === 0 && running) {
+      playCompletionSound();
       setRunning(false);
     }
-  }, [remaining])
+  }, [remaining, running])
 
 
   if (!running) {
