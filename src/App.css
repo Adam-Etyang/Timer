@@ -51,9 +51,8 @@
   flex-direction: row;
   align-items:center;
   gap:2em;
-  
-
 }
+
 .cancel-button{
   width:9em;
   height:2.5em;
@@ -61,7 +60,19 @@
   border:0;
   font-family:'SF Mono', monospace;
   background-color : #262626;
+  cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+
 }
+.cancel-button:hover{
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        transform: translateY(-2px);
+
+
+
+}
+
 .start-button{
   width:9em;
   height:2.5em;
@@ -69,6 +80,13 @@
   border-radius: 3em;
   font-family:'SF Mono', monospace;
   background-color : #31D158;
+  cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+}
+.start-button:hover{
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+              transform: translateY(-2px);
 }
 .pause-button{
     width:9em;
@@ -77,25 +95,73 @@
   border-radius: 3em;
   font-family:'SF Mono', monospace;
   background-color : #FF9230;
-
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+}
+.pause-button:hover{
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+              transform: translateY(-2px);
 
 }
+
+.pause-button:active{
+    transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+}
+
+
 .increase-button{
   padding:0px;
   margin-top:12px;
   height:3em;
   width:3em;
   border-radius:50%;
-  font-size:12px;
-  border:0
+  font-size:16px;
+  font-weight:600;
+  border:0;
+  background-color:#2a2a2a;
+  color:#fff;
+  cursor:pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.increase-button:hover{
+  background-color:#3a3a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.increase-button:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .Decrease-button{
+  padding:0px;
   height:3em;
   width:3em;
-margin-bottom:12px;
+  margin-bottom:12px;
   border-radius:50%;
-  font-size:12px;
-  border:0
+  font-size:16px;
+  font-weight:600;
+  border:0;
+  background-color:#2a2a2a;
+  color:#fff;
+  cursor:pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.Decrease-button:hover{
+  background-color:#3a3a3a;
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.Decrease-button:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .Timer-container{
 display : flex;

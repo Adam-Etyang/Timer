@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react';
+import { Button } from '@headlessui/react'
 
 export default function App() {
 
@@ -73,33 +74,33 @@ export default function App() {
           <div className='time-container'>
             <div className='hour-container'>
               <p className='label'>hr</p>
-              <button type="button" onClick={() => handleIncrease('hours')} className='increase-button'>+</button>
+              <Button className='increase-button' onClick={() => handleIncrease('hours')}>+</Button>
               <p className='value'>{hours}</p>
-              <button type="button" onClick={() => handleDecrease('hours')} className='Decrease-button'>-</button>
+              <Button type="button" onClick={() => handleDecrease('hours')} className='Decrease-button'>-</Button>
 
             </div>
             <div className='minuite-container'>
 
               <p className='label'>min</p>
-              <button type="" className='increase-button' onClick={() => handleIncrease('minuites')}>+</button>
+              <Button type="" className='increase-button' onClick={() => handleIncrease('minuites')}>+</Button>
               <p className='value'>{minuites}</p>
-              <button type="" className='Decrease-button' onClick={() => handleDecrease('minuites')}>-</button>
+              <Button type="" className='Decrease-button' onClick={() => handleDecrease('minuites')}>-</Button>
             </div>
             <div className='seconds-container'>
               <p className='label'>sec</p>
-              <button type="" className='increase-button' onClick={() => handleIncrease('seconds')}>+</button>
+              <Button type="" className='increase-button' onClick={() => handleIncrease('seconds')}>+</Button>
               <p className='value'>{seconds}</p>
-              <button type="" className='Decrease-button' onClick={() => handleDecrease('seconds')}>-</button>
+              <Button type="" className='Decrease-button' onClick={() => handleDecrease('seconds')}>-</Button>
 
             </div>
           </div>
           <div className='buttons-container'>
             <div>
-              <button className='cancel-button' onClick={handleCancel}>
-                Cancel</button>
+              <Button className='cancel-button' onClick={handleCancel}>
+                Cancel</Button>
             </div>
             <div>
-              <button className='start-button' onClick={handleStart}>Start</button>
+              <Button className='start-button' onClick={handleStart}>Start</Button>
 
             </div>
           </div>
@@ -186,8 +187,8 @@ export default function App() {
 
         </div>
         <div className='buttons-container'>
-          <button type="button" className='cancel-button' onClick={() => { setRunning(false) }}>Cancel</button>
-          <button type="button" className='pause-button' onClick={() => setPaused(p => !p)}>{paused ? "Resume" : "Pause"}</button>
+          <Button type="button" className='cancel-button' onClick={() => { setRunning(false) }}>Cancel</Button>
+          <Button type="button" className='pause-button' onClick={() => setPaused(p => !p)}>{paused ? "Resume" : "Pause"}</Button>
         </div>
 
       </div>
