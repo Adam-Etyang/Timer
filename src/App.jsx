@@ -146,22 +146,6 @@ export default function App() {
     <>
       <div className='Timer-container'>
         <div className='Enclosure'>
-          {/*
-          <div className='Timer'>
-            <div className='hour-container'>
-              <p className='label'>hr</p>
-              <p className='value'>{hours}</p>
-            </div>
-            <div className='minuite-container'>
-              <p className='label'>min</p>
-              <p className='value'>{minuites}</p>
-            </div>
-            <div className='seconds-container'>
-              <p className='label'>sec</p>
-              <p className='value'>{seconds}</p>
-            </div>
-          </div>
-*/}
           <div className='ring-wrapper'>
             <svg
               width={(RADIUS + STROKE) * 2}
